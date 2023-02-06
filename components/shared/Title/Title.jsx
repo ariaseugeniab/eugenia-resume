@@ -11,7 +11,7 @@ const StyledTitle = styled.h1`
   text-align: ${({ textAlign }) => textAlign};
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   line-height: 1.4;
   font-weight: normal;
   margin: ${({ margin }) => margin};

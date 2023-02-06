@@ -11,8 +11,8 @@ const Home = () => {
         <AboutMeText>
           <StyledText>
             I'm a Frontend Developer currently working as a contractor for a
-            Cyber Security product using React Js and React-Redux. I'm also a
-            bit experienced in Next Js and I’m interested in Mobile Development
+            Cyber Security product using React Js and React-Redux. I'm also
+            experienced in Next Js and I’m interested in Mobile Development
             technologies such as React Native and Flutter.
           </StyledText>
           <StyledText>
@@ -83,8 +83,8 @@ const StyledText = styled.p`
   font-family: "Lato";
   font-size: 14px;
   color: #666666;
-  letter-spacing: 2px;
   line-height: 1.4;
+  text-align: justify;
 `;
 
 const CardsContainer = styled.div`
