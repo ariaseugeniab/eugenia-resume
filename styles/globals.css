@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  src: local('Lato'), url("/fonts/Lato/Lato-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  src: local('Lato'), url("/fonts/Lato/Lato-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato'), url("/fonts/Lato/Lato-Light.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  src: local('Oswald'), url("/fonts/Oswald/Oswald-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 800;
+  src: local('Oswald'), url("/fonts/Oswald/Oswald-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 100;
+  src: local('Oswald'), url("/fonts/Oswald/Oswald-Light.ttf") format('truetype');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato','Oswald', Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
