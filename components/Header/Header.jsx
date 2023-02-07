@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import theme from "../../theme/theme";
+import { BasicTitle } from "../shared/Text/text";
 import MainLogo from "./MainLogo/MainLogo";
 
 const Header = () => {
@@ -36,7 +38,9 @@ const Header = () => {
             <StyledLink href="/projects">Projects</StyledLink>
             <StyledLink href="/education">Education</StyledLink>
           </MenuContainer>
-          <LinearButton href="/contact-me">CONTACT ME!</LinearButton>
+          <LinearButton href="/contact-me">
+            <BasicTitle>CONTACT ME!</BasicTitle>
+          </LinearButton>
         </HeaderContainer>
       </StyledHeader>
     </Container>
@@ -45,7 +49,7 @@ const Header = () => {
 
 const Container = styled.div`
   .headerTest {
-    background-color: transparent;
+    background-color: ${theme.color.transparent};
     transition: all 0.5s ease-out 0s;
   }
 `;
@@ -53,7 +57,7 @@ const Container = styled.div`
 const StyledHeader = styled.header`
   position: fixed;
   top: 0;
-  background-color: #ca9c9a;
+  background-color: ${theme.color.paleOrange};
   transition: all 0.5s ease-out 0s;
   width: 100%;
   z-index: 2;
@@ -65,7 +69,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  color: white;
+  color: ${theme.color.white};
   max-width: 1200px;
   margin: auto;
   padding: 10px 0;
@@ -82,7 +86,7 @@ const StyledLink = styled(Link)`
   &:hover::after {
     width: 100%;
     transition: width 0.3s;
-    color: #2b3538;
+    color: ${theme.color.grey};
   }
   &:after {
     content: "";
@@ -96,18 +100,14 @@ const StyledLink = styled(Link)`
 
 const LinearButton = styled(Link)`
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  border-radius: 8px;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 1.4;
+  background-color: ${theme.color.transparent};
+  border: ${theme.border.solidWhite2};
+  color: ${theme.color.white};
+  border-radius: ${theme.borderRadius.light};
   padding: 10px;
 
   &:hover {
-    box-shadow: rgb(255 255 255/ 15%) 0px 4px 8px;
+    box-shadow: ${theme.boxShadow.white};
   }
 `;
 

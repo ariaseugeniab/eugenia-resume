@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import theme from "../../theme/theme";
 import Title from "../shared/Title/Title";
 
 const Profile = () => {
@@ -8,7 +9,7 @@ const Profile = () => {
       <RightContent>
         <Title
           size="45px"
-          color="white"
+          color={theme.color.white}
           width="80%"
           textAlign="center"
           margin="10px auto"
@@ -39,8 +40,8 @@ const ImageContainer = styled.div`
   background-image: url(${({ image }) => image});
   background-position: 55% 35%;
   background-size: 110%;
-  border-radius: 50%;
-  border: 10px solid white;
+  border-radius: ${theme.borderRadius.circular};
+  border: ${theme.border.boldWhite};
   filter: grayscale(100%);
 `;
 
@@ -49,9 +50,9 @@ const RightContent = styled.div`
 `;
 
 const DescriptionContainer = styled.div`
-  background-color: #ca9c9a;
+  background-color: ${theme.color.paleOrange};
   padding: 20px;
-  color: white;
+  color: ${theme.color.white};
 `;
 
 const Description = styled.h3`

@@ -1,19 +1,15 @@
 import styled from "@emotion/styled";
+import { BasicTitle } from "../Text/text";
 
 const Title = (props) => {
   return <StyledTitle {...props}>{props.children}</StyledTitle>;
 };
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled(BasicTitle)`
   color: ${({ color }) => color};
   font-size: ${({ size }) => size};
   width: ${({ width }) => (width ? width : "fit-content")};
   text-align: ${({ textAlign }) => textAlign};
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 1.4;
-  font-weight: normal;
   margin: ${({ margin }) => margin};
 `;
 

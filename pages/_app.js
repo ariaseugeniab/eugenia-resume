@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 
 const MainContainer = styled.div`
   padding-top: 50px;
-  background: rgb(153, 135, 207);
+  background: ${theme.color.purple};
   background: linear-gradient(
     180deg,
     rgba(153, 135, 207, 1) 0%,

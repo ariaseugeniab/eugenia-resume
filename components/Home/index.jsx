@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import theme from "../../theme/theme";
 import Profile from "../Profile/Profile";
+import { BasicTitle, StyledText } from "../shared/Text/text";
 
 const Home = () => {
   return (
@@ -70,21 +72,13 @@ const Home = () => {
 
 const StyledArticle = styled.div`
   padding: 2rem;
-  background-color: white;
-  border-radius: 10px;
+  background-color: ${theme.color.white};
+  border-radius: ${theme.borderRadius.regular};
 `;
 
 const AboutMeText = styled.div`
   width: 90%;
   margin: auto;
-`;
-
-const StyledText = styled.p`
-  font-family: "Lato";
-  font-size: 14px;
-  color: #666666;
-  line-height: 1.4;
-  text-align: justify;
 `;
 
 const CardsContainer = styled.div`
@@ -100,28 +94,25 @@ const Card = styled(Link)`
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
-  padding-top: 0;
+  /* padding-top: 0; */
   text-align: left;
-  color: inherit;
   text-decoration: none;
-  background-color: white;
-  border-radius: 10px;
+  background-color: ${theme.color.white};
+  border-radius: ${theme.borderRadius.regular};
   transition: color 0.15s ease, border-color 0.15s ease;
-  border: 1px solid #eaeaea;
-  box-shadow: none;
+  border: ${theme.border.thin};
+  box-shadow: ${theme.boxShadow.none};
   cursor: pointer;
+
   &:hover {
-    border: 1px solid white;
-    box-shadow: rgb(0 0 0 / 15%) 0px 4px 8px;
+    border: ${theme.border.solidWhite1};
+    box-shadow: ${theme.boxShadow.grey};
   }
 `;
 
-const CardTitle = styled.h5`
-  font-family: "Oswald";
-  background-color: #9987cf;
-  letter-spacing: 5px;
-  line-height: 1.4;
-  color: white;
+const CardTitle = styled(BasicTitle)`
+  background-color: ${theme.color.purple};
+  color: ${theme.color.white};
   padding: 10px;
   font-size: 18px;
   font-weight: normal;

@@ -1,35 +1,34 @@
 const theme = {
   borderRadius: {
     none: "0",
+    light: "8px",
+    regular: "10px",
+    circular: "50%",
   },
   boxShadow: {
     none: "none",
+    white: "rgb(255 255 255/ 15%) 0px 4px 8px",
+    grey: "rgb(0 0 0 / 15%) 0px 4px 8px",
   },
   border: {
-    thin01: "0.1px solid #FFFFFF",
-    thin02: "0.2px solid #FFFFFF",
-    thin05: "0.5px solid #FFFFFF",
-    regular: "1px solid #FFFFFF",
+    thin: "1px solid #eaeaea",
+    solidWhite1: "2px solid white",
+    solidWhite2: "2px solid white",
+    boldWhite: "10px solid white",
   },
   color: {
     black: "#000000",
-    black100: "#101010",
-    black200: "#1B1B1B",
-    darkGrey: "#FFFFFF0F",
-    lightGrey: "#FFFFFF59",
     white: "#FFFFFF",
-    blue: "#516EB8",
+    grey: "#2b3538",
+    lightGrey: "#666666",
+    paleOrange: "#ca9c9a",
+    purple: "#9987cf",
+    transparent: "transparent",
   },
-  gradient: {
-    LinearGradientHor:
-      "linear-gradient(90deg, #F08548 2.44%, rgba(151, 71, 255, 0.96) 80.08%)",
-    LinearGradientVer: "linear-gradient(180deg, #F08548 0%, #9747FF 100%)",
-    radialGradient:
-      "radial-gradient(42.01% 43.18% at 50% 48.6%, #F08548 0%, rgba(151, 71, 255, 0) 100%)",
-  },
+  gradient: {},
   fontFamily: {
-    shareTech: "Share Tech Mono",
-    ntr: "NTR",
+    lato: "Lato",
+    oswald: "Oswald",
   },
   fontSize: {
     xs: "14px",
@@ -38,10 +37,12 @@ const theme = {
     xl: "24px",
     xxl: "50px",
   },
-  height: {
-    header: "58px",
+  lineHeight: {
+    regular: 1.4,
   },
-  letterSpacing: {},
+  letterSpacing: {
+    title: "4px",
+  },
 };
 
 export default theme;

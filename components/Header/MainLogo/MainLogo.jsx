@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import theme from "../../../theme/theme";
 import Title from "../../shared/Title/Title";
 
 const MainLogo = () => {
   return (
     <MainTitle href="/">
-      <Title size="20px" color="#666666">
+      <Title size="20px" color={theme.color.lightGrey}>
         EUGENIA
       </Title>
-      <Title size="20px" color="white">
+      <Title size="20px" color={theme.color.white}>
         ARIAS
       </Title>
     </MainTitle>

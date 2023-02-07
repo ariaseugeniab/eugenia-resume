@@ -1,24 +1,36 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import theme from "../../theme/theme";
+import { BasicTitle } from "../shared/Text/text";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <FooterContent>
         <Column>
-          <StyledLink href="/experience">Work Experience</StyledLink>
+          <StyledLink href="/experience">
+            <BasicTitle>Work Experience</BasicTitle>
+          </StyledLink>
         </Column>
         <Column>
-          <StyledLink href="/skills">Skills</StyledLink>
+          <StyledLink href="/skills">
+            <BasicTitle>Skills</BasicTitle>
+          </StyledLink>
         </Column>
         <Column>
-          <StyledLink href="/projects">Projects</StyledLink>
+          <StyledLink href="/projects">
+            <BasicTitle>Projects</BasicTitle>
+          </StyledLink>
         </Column>
         <Column>
-          <StyledLink href="/education">Education</StyledLink>
+          <StyledLink href="/education">
+            <BasicTitle>Education</BasicTitle>
+          </StyledLink>
         </Column>
         <Column>
-          <StyledLink href="/contact-me">CONTACT ME!</StyledLink>
+          <StyledLink href="/contact-me">
+            <BasicTitle>Contact me!</BasicTitle>
+          </StyledLink>
         </Column>
       </FooterContent>
     </StyledFooter>
@@ -26,9 +38,9 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.div`
-  background-color: #ca9c9a;
+  background-color: ${theme.color.paleOrange};
   width: 100%;
-  border-top: 1px solid #eaeaea;
+  border-top: ${theme.border.thin};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,10 +56,6 @@ const FooterContent = styled.div`
   gap: 60px;
   align-items: flex-start;
   justify-content: space-between;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 1.4;
 `;
 
 const Column = styled.div`
@@ -55,18 +63,19 @@ const Column = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  color: white;
+  color: ${theme.color.white};
+
   &:hover::after {
     width: 100%;
     transition: width 0.3s;
-    color: #2b3538;
+    color: ${theme.color.grey};
   }
   &:after {
     content: "";
     display: block;
     width: 0px;
     height: 3px;
-    background: rgb(255, 255, 255);
+    background: ${theme.color.white};
     transition: width 0.3s ease 0s;
   }
 `;
