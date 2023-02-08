@@ -12,7 +12,7 @@ const theme = {
   },
   border: {
     thin: "1px solid #eaeaea",
-    solidWhite1: "2px solid white",
+    solidWhite1: "1px solid white",
     solidWhite2: "2px solid white",
     boldWhite: "10px solid white",
   },

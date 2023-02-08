@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import theme from "../../theme/theme";
-import { BasicTitle } from "../shared/Text/text";
+import { BasicTitle } from "../Shared/Text/text";
 import MainLogo from "./MainLogo/MainLogo";
 
 const Header = () => {

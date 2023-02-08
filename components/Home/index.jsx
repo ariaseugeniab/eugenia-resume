@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import theme from "../../theme/theme";
 import Profile from "../Profile/Profile";
-import { BasicTitle, StyledText } from "../shared/Text/text";
+import { BasicTitle, StyledText } from "../Shared/Text/text";
 
 const Home = () => {
   return (

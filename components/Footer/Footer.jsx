@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import theme from "../../theme/theme";
-import { BasicTitle } from "../shared/Text/text";
+import { BasicTitle } from "../Shared/Text/text";
 
 const Footer = () => {
   return (

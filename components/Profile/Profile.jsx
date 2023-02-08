@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import theme from "../../theme/theme";
-import Title from "../shared/Title/Title";
+import Title from "../Shared/Title/Title";
 
 const Profile = () => {
   return (
