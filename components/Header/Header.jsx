@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import theme from "../../theme/theme";
+import { useEffect } from "react";
 import { BasicTitle } from "../Shared/Text/text";
 import MainLogo from "./MainLogo/MainLogo";
 
@@ -49,7 +48,7 @@ const Header = () => {
 
 const Container = styled.div`
   .headerTest {
-    background-color: ${theme.color.transparent};
+    background-color: ${(props) => props.theme.color.transparent};
     transition: all 0.5s ease-out 0s;
   }
 `;
@@ -57,7 +56,7 @@ const Container = styled.div`
 const StyledHeader = styled.header`
   position: fixed;
   top: 0;
-  background-color: ${theme.color.paleOrange};
+  background-color: ${(props) => props.theme.color.paleOrange};
   transition: all 0.5s ease-out 0s;
   width: 100%;
   z-index: 2;
@@ -69,7 +68,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  color: ${theme.color.white};
+  color: ${(props) => props.theme.color.white};
   max-width: 1200px;
   margin: auto;
   padding: 10px 0;
@@ -86,7 +85,7 @@ const StyledLink = styled(Link)`
   &:hover::after {
     width: 100%;
     transition: width 0.3s;
-    color: ${theme.color.grey};
+    color: ${(props) => props.theme.color.grey};
   }
   &:after {
     content: "";
@@ -100,14 +99,14 @@ const StyledLink = styled(Link)`
 
 const LinearButton = styled(Link)`
   cursor: pointer;
-  background-color: ${theme.color.transparent};
-  border: ${theme.border.solidWhite2};
-  color: ${theme.color.white};
-  border-radius: ${theme.borderRadius.light};
+  background-color: ${(props) => props.theme.color.transparent};
+  border: ${(props) => props.theme.border.solidWhite2};
+  color: ${(props) => props.theme.color.white};
+  border-radius: ${(props) => props.theme.borderRadius.light};
   padding: 10px;
 
   &:hover {
-    box-shadow: ${theme.boxShadow.white};
+    box-shadow: ${(props) => props.theme.boxShadow.white};
   }
 `;
 

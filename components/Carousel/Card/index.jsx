@@ -46,7 +46,7 @@ const StyledTextContainer = styled.div`
 `;
 
 const StyledH1 = styled.h1`
-  font-family: ${theme.fontFamily.primary};
+  font-family: ${(props) => props.theme.fontFamily.primary};
   font-style: normal;
   font-weight: 900;
   font-size: ${({ mobile }) => (mobile ? "29px" : "48px")};
@@ -58,7 +58,7 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledParragraph = styled.p`
-  font-family: ${theme.fontFamily.primary};
+  font-family: ${(props) => props.theme.fontFamily.primary};
   font-style: normal;
   font-weight: 500;
   font-size: ${({ mobile }) => (mobile ? "14px" : "24px")};

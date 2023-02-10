@@ -80,8 +80,12 @@ ul {
 }
 
 ul {
-  padding: 0;
-  list-style: none;
+  padding: 20px;
+  /* list-style: none; */
+}
+
+li{
+  margin: 10px 0;
 }
 
 button {

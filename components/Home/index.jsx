@@ -8,61 +8,52 @@ const Home = () => {
   return (
     <div>
       <Profile />
-
       <StyledArticle>
-        <AboutMeText>
-          <StyledText>
-            I'm a Frontend Developer currently working as a contractor for a
-            Cyber Security product using React Js and React-Redux. I'm also
-            experienced in Next Js and I’m interested in Mobile Development
-            technologies such as React Native and Flutter.
-          </StyledText>
-          <StyledText>
-            I have an educational and professional background in communication,
-            that leads me to be an extrovert and an easy going person –I'm
-            passionate about continuous learning and working among others. I'm
-            also responsible and highly organized.
-          </StyledText>
-        </AboutMeText>
         <CardsContainer>
           <Card href="/experience">
             <CardTitle>WORK EXPERIENCE &rarr;</CardTitle>
-            <StyledText>
-              Find in-depth information about Next.js features and API.
-            </StyledText>
+            <CardText>My IT and not-IT-related work experiences.</CardText>
+            <CardText isHidden>
+              <ul>
+                <li>
+                  <p>REACT DEVELOPER</p>
+                  <p>LOOPSTUDIO | sept 2021 – Present</p>
+                </li>
+                <li>
+                  <p>FRONT END Developer - Netsuite partner</p>
+                  <p>EUREKA LABS | oct 2020 – SEPT 2021</p>
+                </li>
+              </ul>
+            </CardText>
           </Card>
 
           <Card href="/skills">
             <CardTitle>SKILLS &rarr;</CardTitle>
-            <StyledText>
-              Learn about Next.js in an interactive course with quizzes!
-            </StyledText>
+            <CardText>A list of known and used technologies.</CardText>
           </Card>
 
           <Card href="/projects">
             <CardTitle>PROJECTS &rarr;</CardTitle>
-            <StyledText>
-              Discover and deploy boilerplate example Next.js projects.
-            </StyledText>
+            <CardText>
+              Discover all projects worked on and the technologies used.
+            </CardText>
           </Card>
           <Card href="/education">
             <CardTitle>EDUCATION &rarr;</CardTitle>
-            <StyledText>
-              Discover and deploy boilerplate example Next.js projects.
-            </StyledText>
+            <CardText>My educational background til this day.</CardText>
           </Card>
 
           <Card href="/other">
             <CardTitle>TRAINING, COURSES AND OTHER &rarr;</CardTitle>
-            <StyledText>
+            <CardText>
               Instantly deploy your Next.js site to a public URL with Vercel.
-            </StyledText>
+            </CardText>
           </Card>
           <Card href="/contact-me">
             <CardTitle>CONTACT ME! &rarr;</CardTitle>
-            <StyledText>
+            <CardText>
               Instantly deploy your Next.js site to a public URL with Vercel.
-            </StyledText>
+            </CardText>
           </Card>
         </CardsContainer>
       </StyledArticle>
@@ -72,50 +63,54 @@ const Home = () => {
 
 const StyledArticle = styled.div`
   padding: 2rem;
-  background-color: ${theme.color.white};
-  border-radius: ${theme.borderRadius.regular};
-`;
-
-const AboutMeText = styled.div`
-  width: 90%;
-  margin: auto;
+  background-color: ${(props) => props.theme.color.white};
+  border-radius: ${(props) => props.theme.borderRadius.regular};
 `;
 
 const CardsContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin-top: 2rem;
 `;
 
 const Card = styled(Link)`
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
-  /* padding-top: 0; */
   text-align: left;
   text-decoration: none;
-  background-color: ${theme.color.white};
-  border-radius: ${theme.borderRadius.regular};
+  background-color: ${(props) => props.theme.color.white};
+  border-radius: ${(props) => props.theme.borderRadius.regular};
   transition: color 0.15s ease, border-color 0.15s ease;
-  border: ${theme.border.thin};
-  box-shadow: ${theme.boxShadow.none};
+  border: ${(props) => props.theme.border.thin};
+  box-shadow: ${(props) => props.theme.boxShadow.none};
   cursor: pointer;
 
+  height: 134px;
+  overflow: hidden;
+
   &:hover {
-    border: ${theme.border.solidWhite1};
-    box-shadow: ${theme.boxShadow.grey};
+    border: ${(props) => props.theme.border.solidWhite1};
+    box-shadow: ${(props) => props.theme.boxShadow.grey};
+    height: 180px;
   }
 `;
 
 const CardTitle = styled(BasicTitle)`
-  background-color: ${theme.color.purple};
-  color: ${theme.color.white};
+  background-color: ${(props) => props.theme.color.purple};
+  color: ${(props) => props.theme.color.white};
   padding: 10px;
   font-size: 18px;
   font-weight: normal;
+`;
+
+const CardText = styled(StyledText)`
+  margin: 10px 0;
+  p {
+    color: ${({ isHidden }) => isHidden && theme.color.lightGrey};
+  }
 `;
 
 export default Home;

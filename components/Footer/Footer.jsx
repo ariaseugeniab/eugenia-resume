@@ -38,9 +38,9 @@ const Footer = () => {
 };
 
 const StyledFooter = styled.div`
-  background-color: ${theme.color.paleOrange};
+  background-color: ${(props) => props.theme.color.paleOrange};
   width: 100%;
-  border-top: ${theme.border.thin};
+  border-top: ${(props) => props.theme.border.thin};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,19 +63,19 @@ const Column = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${theme.color.white};
+  color: ${(props) => props.theme.color.white};
 
   &:hover::after {
     width: 100%;
     transition: width 0.3s;
-    color: ${theme.color.grey};
+    color: ${(props) => props.theme.color.grey};
   }
   &:after {
     content: "";
     display: block;
     width: 0px;
     height: 3px;
-    background: ${theme.color.white};
+    background: ${(props) => props.theme.color.white};
     transition: width 0.3s ease 0s;
   }
 `;
