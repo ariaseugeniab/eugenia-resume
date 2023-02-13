@@ -11,7 +11,7 @@ const Home = () => {
       <StyledArticle>
         <CardsContainer>
           <Card href="/experience">
-            <CardTitle>WORK EXPERIENCE &rarr;</CardTitle>
+            <CardTitle>WORK EXPERIENCE </CardTitle>
             <CardText>My IT and not-IT-related work experiences.</CardText>
             <CardText isHidden>
               <ul>
@@ -19,6 +19,7 @@ const Home = () => {
                   <p>REACT DEVELOPER</p>
                   <p>LOOPSTUDIO | sept 2021 – Present</p>
                 </li>
+
                 <li>
                   <p>FRONT END Developer - Netsuite partner</p>
                   <p>EUREKA LABS | oct 2020 – SEPT 2021</p>
@@ -88,13 +89,13 @@ const Card = styled(Link)`
   box-shadow: ${(props) => props.theme.boxShadow.none};
   cursor: pointer;
 
-  height: 134px;
+  max-height: 150px;
   overflow: hidden;
 
   &:hover {
     border: ${(props) => props.theme.border.solidWhite1};
     box-shadow: ${(props) => props.theme.boxShadow.grey};
-    height: 180px;
+    max-height: 100%;
   }
 `;
 
@@ -111,6 +112,7 @@ const CardText = styled(StyledText)`
   p {
     color: ${({ isHidden }) => isHidden && theme.color.lightGrey};
   }
+  opacity: 0.5;
 `;
 
 export default Home;
