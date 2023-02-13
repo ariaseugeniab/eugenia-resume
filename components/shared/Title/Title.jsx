@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BasicTitle } from "../Text/text";
+import { BasicTitle } from "../Text";
 
 const Title = (props) => {
   return <StyledTitle {...props}>{props.children}</StyledTitle>;

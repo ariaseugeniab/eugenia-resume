@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import theme from "../../theme/theme";
 import Profile from "../Profile/Profile";
-import { BasicTitle, StyledText } from "../Shared/Text/text";
+import { BasicTitle, StyledText } from "../Shared/Text";
 
 const Home = () => {
   return (
@@ -110,7 +109,7 @@ const CardTitle = styled(BasicTitle)`
 const CardText = styled(StyledText)`
   margin: 10px 0;
   p {
-    color: ${({ isHidden }) => isHidden && theme.color.lightGrey};
+    color: ${({ isHidden, theme }) => isHidden && theme.color.lightGrey};
   }
   opacity: 0.5;
 `;
