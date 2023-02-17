@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import Profile from "../Profile/Profile";
+import { StyledArticle } from "../Shared/Content";
 import { BasicTitle, StyledText } from "../Shared/Text";
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
           <Card href="/experience">
             <CardTitle>WORK EXPERIENCE </CardTitle>
             <CardText>My IT and not-IT-related work experiences.</CardText>
-            <CardText isHidden>
+            {/* <CardText isHidden>
               <ul>
                 <li>
                   <p>REACT DEVELOPER</p>
@@ -24,7 +25,7 @@ const Home = () => {
                   <p>EUREKA LABS | oct 2020 – SEPT 2021</p>
                 </li>
               </ul>
-            </CardText>
+            </CardText> */}
           </Card>
 
           <Card href="/skills">
@@ -60,12 +61,6 @@ const Home = () => {
     </div>
   );
 };
-
-const StyledArticle = styled.div`
-  padding: 2rem;
-  background-color: ${(props) => props.theme.color.white};
-  border-radius: ${(props) => props.theme.borderRadius.regular};
-`;
 
 const CardsContainer = styled.div`
   display: flex;
@@ -108,9 +103,9 @@ const CardTitle = styled(BasicTitle)`
 
 const CardText = styled(StyledText)`
   margin: 10px 0;
-  p {
+  /* p {
     color: ${({ isHidden, theme }) => isHidden && theme.color.lightGrey};
-  }
+  } */
   opacity: 0.5;
 `;
 
